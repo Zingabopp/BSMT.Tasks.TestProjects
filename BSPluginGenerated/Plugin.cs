@@ -1,7 +1,7 @@
 ﻿using IPA;
 using IPALogger = IPA.Logging.Logger;
 
-namespace BSPluginGenerated
+namespace BSPluginGenerated.Subnamespace
 {
     [Plugin(RuntimeOptions.SingleStartInit)]
     public class Plugin

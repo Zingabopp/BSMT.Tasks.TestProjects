@@ -5,12 +5,12 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{4A10A330-BC51-420E-A00F-AF53DFFAB25D}</ProjectGuid>
+    <ProjectGuid>{FE0744A4-64B6-45D4-917A-7CE6257C7222}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>BSPlugin1</RootNamespace>
-    <AssemblyName>BSPlugin1</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <RootNamespace>BSPluginGenerated</RootNamespace>
+    <AssemblyName>BSPluginGenerated</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>portable</DebugType>
@@ -92,13 +92,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="RenamedPlugin.cs" />
+    <Compile Include="Plugin.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Directory.Build.props" Condition="Exists('Directory.Build.props')" />
-    <None Include="Directoryasdfasdf.Build.targets" Condition="Exists('Directory.Build.targets')" />
-    <None Include="BSPlugin1.csproj.user" Condition="Exists('BSPlugin1.csproj.user')" />
+    <None Include="BSPluginGenerated.csproj.user" Condition="Exists('BSPluginGenerated.csproj.user')" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="BeatSaberModdingTools.Tasks">

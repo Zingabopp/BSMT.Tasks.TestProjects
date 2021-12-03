@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>netstandard2.0</TargetFramework>
+	</PropertyGroup>
+	<ItemGroup>
+		<Reference Include="IPA.Loader">
+			<HintPath>$(BeatSaberDir)\Beat Saber_Data\Managed\IPA.Loader.dll</HintPath>
+			<Private>False</Private>
+		</Reference>
+	</ItemGroup>
+	<ItemGroup>
+		<None Include="BSPluginSDK.csproj.user" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<EmbeddedResource Include="manifest-renamed.json" LogicalName="BSPluginSDK.manifest.json" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="BeatSaberModdingTools.Tasks" Version="2.0.0-beta2" />
+	</ItemGroup>
+
+</Project>

@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>netstandard2.0</TargetFramework>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<None Update="Directory.Build.props">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Include="BSLibSDKGenerated.csproj.user" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="BeatSaberModdingTools.Tasks" Version="2.0.0-beta2" />
+	</ItemGroup>
+</Project>

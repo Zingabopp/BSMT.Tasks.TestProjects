@@ -1,12 +1,12 @@
 ﻿{
   "$schema": "https://raw.githubusercontent.com/bsmg/BSIPA-MetadataFileSchema/master/Schema.json",
-  "id": "BSPlugin1",
-  "name": "BSPlugin1",
+  "id": "BSPluginSDK",
+  "name": "BSPluginSDK",
   "author": "",
-  "version": "0.0.1",
+  "version": "1.1.1",
   "description": "",
-  "gameVersion": "1.12.2",
+  "gameVersion": "1.18.3",
   "dependsOn": {
-    "BSIPA": "^4.1.3"
+    "BSIPA": "^4.2.0"
   }
 }

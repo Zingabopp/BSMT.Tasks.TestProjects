@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- This file contains project properties used by the build. -->
+<Project>
+	<PropertyGroup>
+		<ImportBSMTTargets>True</ImportBSMTTargets>
+		<BSMTProjectType>BSIPA</BSMTProjectType>
+		<!--<ManifestPath></ManifestPath>-->
+		<GenerateManifest>True</GenerateManifest>
+	</PropertyGroup>
+	<!-- Properties must be set in a target because AssemblyName isn't set immediately -->
+	<Target Name="SetManifestInfo" BeforeTargets="BSMT_BeforeBuild">
+		<Message Text="OutputAssemblyName: $(OutputAssemblyName)" Importance="high" />
+		<Message Text="AssemblyName: $(AssemblyName)" Importance="high" />
+		<ItemGroup>
+			<OutputCopy Include="$(OutDir)$(AssemblyName).dll" OutputPath="Libs\$(AssemblyName).dll" />
+			<OutputCopy Include="$(OutDir)$(AssemblyName).pdb" OutputPath="Libs\$(AssemblyName).pdb" />
+			<OutputCopy Include="$(OutDir)$(AssemblyName).manifest" OutputPath="Plugins\$(AssemblyName).manifest" />
+		</ItemGroup>
+		<PropertyGroup Condition="'$(GenerateManifest)' == 'True'">
+			<RequiresBsipa>False</RequiresBsipa>
+			<PluginId>$(AssemblyTitle)Id</PluginId>
+			<PluginName>$(AssemblyName)</PluginName>
+			<Authors>Zingabopp</Authors>
+			<Version>2.1.3</Version>
+			<!-- Set by the version in Properties/AssemblyInfo.cs -->
+			<GameVersion>1.18.3</GameVersion>
+			<Description>A mod for testing UMT.T</Description>
+			<ProjectSource>https://github.com/Zingabopp/UnityModdingTools.Tasks</ProjectSource>
+			<ProjectHome>https://github.com/Zingabopp/UnityModdingTools</ProjectHome>
+			<Donate>https://ko-fi.com/zingabopp</Donate>
+			<!--<PluginIcon>Path/to/icon.png</PluginIcon>-->
+			<!--<PluginHint>BSPlugin1.Namespace</PluginHint>-->
+			<!-- Namespace of [Plugin] class if not root. -->
+			<BaseManifestPath></BaseManifestPath>
+			<!-- Path to existing manifest file to use as a base, if any -->
+		</PropertyGroup>
+		<ItemGroup>
+			<!--<DependsOn Include="BSIPA" Version="^4.2.0" /> -->
+			<RequiredFile Include="Libs/$(AssemblyName).dll" />
+			<!--
+		<ConflictsWith Include="ConflictsWithModId" Version="*" />
+		<LoadBefore Include="LoadBeforeId" />
+		<LoadAfter Include="LoadAfter01" />
+		-->
+		</ItemGroup>
+	</Target>
+	
+</Project>

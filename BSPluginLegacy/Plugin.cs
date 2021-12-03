@@ -1,19 +1,19 @@
 ﻿using IPA;
 using IPALogger = IPA.Logging.Logger;
 
-namespace BSPlugin1
+namespace BSPluginLegacy
 {
     [Plugin(RuntimeOptions.SingleStartInit)]
-    public class RenamedPlugin
+    public class Plugin
     {
-        internal static RenamedPlugin Instance { get; private set; }
+        internal static Plugin Instance { get; private set; }
         /// <summary>
         /// Use to send log messages through BSIPA.
         /// </summary>
         internal static IPALogger Log { get; private set; }
 
         [Init]
-        public RenamedPlugin(IPALogger logger)
+        public Plugin(IPALogger logger)
         {
             Instance = this;
             Log = logger;
@@ -22,7 +22,7 @@ namespace BSPlugin1
         [OnStart]
         public void OnApplicationStart()
         {
-            RenamedPlugin.Log.Info("OnApplicationStart");
+            Plugin.Log.Info("OnApplicationStart");
         }
 
         [OnExit]

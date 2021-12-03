@@ -2,6 +2,8 @@
 <!-- This file contains project properties used by the build. -->
 <Project>
   <PropertyGroup>
+	  <ImportBSMTTargets>True</ImportBSMTTargets>
+	  <BSMTProjectType>BSIPA</BSMTProjectType>
 	<ManifestPath>manifest-renamed.json</ManifestPath>
   </PropertyGroup>
 </Project>

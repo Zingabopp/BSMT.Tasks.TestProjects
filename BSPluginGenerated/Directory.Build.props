@@ -12,8 +12,8 @@
 		<PluginId>$(AssemblyName)Id</PluginId>
 		<PluginName>$(AssemblyName)</PluginName>
 		<Authors>Zingabopp</Authors>
-		<!--<Version></Version>-->
 		<!-- Set by the version in Properties/AssemblyInfo.cs -->
+		<!--<Version></Version>-->
 		<GameVersion>1.18.3</GameVersion>
 		<Description>A mod for testing UMT.T</Description>
 		<ProjectSource>https://github.com/Zingabopp/UnityModdingTools.Tasks</ProjectSource>

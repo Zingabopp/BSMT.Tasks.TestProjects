@@ -18,7 +18,7 @@
 		</ItemGroup>
 		<PropertyGroup Condition="'$(GenerateManifest)' == 'True'">
 			<RequiresBsipa>False</RequiresBsipa>
-			<PluginId>$(AssemblyTitle)Id</PluginId>
+			<PluginId>$(AssemblyName)Id</PluginId>
 			<PluginName>$(AssemblyName)</PluginName>
 			<Authors>Zingabopp</Authors>
 			<Version>2.1.3</Version>

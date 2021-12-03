@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- This file contains project properties used by the build. -->
+<Project>
+	<PropertyGroup>
+		<BSMTProjectType>BSIPA</BSMTProjectType>
+		<!--<ManifestPath></ManifestPath>-->
+		<GenerateManifest>True</GenerateManifest>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(GenerateManifest)' == 'True'">
+		<PluginId>$(AssemblyName)Id</PluginId>
+		<PluginName>$(AssemblyName)</PluginName>
+		<Authors>Zingabopp</Authors>
+		<!--<Version></Version>-->
+		<GameVersion>1.18.3</GameVersion>
+		<Description>A mod for testing UMT.T</Description>
+		<ProjectSource>https://github.com/Zingabopp/UnityModdingTools.Tasks</ProjectSource>
+		<ProjectHome>https://github.com/Zingabopp/UnityModdingTools</ProjectHome>
+		<Donate>https://ko-fi.com/zingabopp</Donate>
+		<!--<PluginIcon>Path/to/icon.png</PluginIcon>-->
+		<PluginHint>BSPlugin1.Plugin</PluginHint>
+		<BaseManifestPath></BaseManifestPath>
+	</PropertyGroup>
+	<ItemGroup>
+		<DependsOn Include="BSIPA" Version="^4.2.0" />
+		<ConflictsWith Include="ConflictsWithModId" Version="*" />
+		<RequiredFile Include="Libs/Required.dll" />
+		<LoadBefore Include="LoadBeforeId" />
+		<LoadAfter Include="LoadAfter01" />
+	</ItemGroup>
+</Project>

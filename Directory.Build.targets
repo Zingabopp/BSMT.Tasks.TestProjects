@@ -1,0 +1,31 @@
+<Project>
+  <Target Name="Test" BeforeTargets="BSMT_AfterBuild">
+	<Message Text="Target: DBT Test (Before BSMT_AfterBuild)" Importance="high" />
+
+	<Message Text="   DynamicAfter: $(DynamicAfter)" Importance="high" />
+	<Message Text="   @(Compile)" Importance="high" />
+	<Message Text="   UsingMicrosoftNETSdk: '$(UsingMicrosoftNETSdk)'" Importance="high"/>
+	<Message Text="   SDK Project detected" Importance="high" Condition="'$(UsingMicrosoftNETSdk)' == 'true'"/>
+	<Message Text="   Old Project Style detected" Importance="high" Condition="'$(UsingMicrosoftNETSdk)' != 'true'"/>
+	<PropertyGroup>
+		<TestFileName Condition="$([System.String]::Copy('%(Compile.Identity)').Contains('AssemblyInfo.cs'))">%(Compile.Identity)</TestFileName>
+	</PropertyGroup>
+	<Message Text="   AssemblyInfo detected in intermediate output: '$(TestFileName)'" Importance="high" Condition="$(TestFileName.StartsWith('$(IntermediateOutputPath)'))" />
+	<Message Text="   AssemblyInfo file found: '$(TestFileName)'" Importance="high" Condition="Exists('$(TestFileName)')" />
+	<!--<Warning Text="   Project Test Prop Value: '$(BSMT_TestProp)'" />
+	<Warning Text="   Project Test Prop2 Value: '$(BSMT_TestProp2)'" />
+	<ItemGroup>
+		<OutputCopy Include="$(OutputPath)$(AssemblyName).dll" OutputPath="\Plugins\Test.dll"/>
+		<OutputCopy Include="$(OutputPath)$(AssemblyName).pdb" OutputPath="\Plugins\Test.pdb"/>
+		<OutputCopy Remove="**"/>
+	</ItemGroup>-->
+  </Target>
+  <Target Name="TestAfterBuild" AfterTargets="Build;BSMT_AfterBuild">
+	<Message Text="Target: DBT TestAfterBuild" Importance="high" />
+	<Message Text="   @(BSMT_TestGroup)" Importance="high" />
+  </Target>
+  <Target Name="TestDynamicPosition" AfterTargets="$(DynamicAfter)">
+	<Message Text="Target: DBT TestDynamicPosition (AfterTarget $(DynamicAfter))" Importance="high" />
+	<Message Text="   -----------------TestDynamicPosition-------------------" Importance="high" />
+  </Target>
+</Project>

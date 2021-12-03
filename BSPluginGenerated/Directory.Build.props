@@ -20,8 +20,8 @@
 		<ProjectHome>https://github.com/Zingabopp/UnityModdingTools</ProjectHome>
 		<Donate>https://ko-fi.com/zingabopp</Donate>
 		<!--<PluginIcon>Path/to/icon.png</PluginIcon>-->
-		<PluginHint>BSPlugin1.Namey</PluginHint>
 		<!-- Namespace of [Plugin] class if not root. -->
+		<!--<PluginHint>BSPluginGenerated.Namespace</PluginHint>-->
 		<BaseManifestPath></BaseManifestPath>
 		<!-- Path to existing manifest file to use as a base, if any -->
 	</PropertyGroup>

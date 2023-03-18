@@ -5,6 +5,7 @@
 	</PropertyGroup>
 
 	<ItemGroup>
+		<SourceRoot Include="$(MSBuildThisFileDirectory)/"/>
 		<EmbeddedResource Include="manifest-renamed.json" LogicalName="BSPluginSDK.manifest.json" />
 	</ItemGroup>
 

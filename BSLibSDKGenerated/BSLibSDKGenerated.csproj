@@ -8,11 +8,10 @@
 		<None Update="Directory.Build.props">
 			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
 		</None>
-		<None Include="BSLibSDKGenerated.csproj.user" />
 	</ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="BeatSaberModdingTools.Tasks" Version="2.0.0-beta3">
+		<PackageReference Include="BeatSaberModdingTools.Tasks" Version="2.0.0-beta5">
 		  <PrivateAssets>all</PrivateAssets>
 		  <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 		</PackageReference>

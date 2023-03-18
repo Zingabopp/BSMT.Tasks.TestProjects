@@ -5,7 +5,7 @@ on:
     branches: [ master ]
     paths:
       - 'BSLibSDKGenerated/**'
-      - '.github/workflows/BSLibSDKGenerated.yml'
+      - '.github/workflows/LibSDKGenerated.yml'
       - 'Packages/**'
   pull_request:
     branches: [ master ]

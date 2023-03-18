@@ -5,7 +5,7 @@ on:
     branches: [ master ]
     paths:
       - 'BSPluginSDK/**'
-      - '.github/workflows/BSPluginSDK.yml'
+      - '.github/workflows/PluginSDK.yml'
       - 'Packages/**'
   pull_request:
     branches: [ master ]

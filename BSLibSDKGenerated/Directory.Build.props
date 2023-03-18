@@ -16,6 +16,9 @@
 			<OutputCopy Include="$(OutDir)$(AssemblyName).pdb" OutputPath="Libs\$(AssemblyName).pdb" />
 			<OutputCopy Include="$(OutDir)$(AssemblyName).manifest" OutputPath="Plugins\$(AssemblyName).manifest" />
 		</ItemGroup>
+		<PropertyGroup>
+			<DisableManifestEmbed>True</DisableManifestEmbed>
+		</PropertyGroup>
 		<PropertyGroup Condition="'$(GenerateManifest)' == 'True'">
 			<RequiresBsipa>False</RequiresBsipa>
 			<PluginId>$(AssemblyName)Id</PluginId>

@@ -34,6 +34,7 @@
 			<BaseManifestPath></BaseManifestPath>
 		</PropertyGroup>
 		<ItemGroup>
+			<SourceRoot Include="$(MSBuildThisFileDirectory)/"/>
 			<!--<DependsOn Include="BSIPA" Version="^4.2.0" /> -->
 			<RequiredFile Include="Libs/$(AssemblyName).dll" />
 			<!--

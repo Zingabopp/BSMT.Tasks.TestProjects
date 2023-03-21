@@ -5,12 +5,14 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<SourceRoot Include="$(MSBuildThisFileDirectory)/"/>
+		<SourceRoot Include="$(MSBuildThisFileDirectory)/" />
 		<EmbeddedResource Include="manifest-renamed.json" LogicalName="BSPluginSDK.manifest.json" />
 	</ItemGroup>
-
+	<Target Name="BSMT Test" BeforeTargets="BSMT_BeforeBuild">
+		<Message Importance="high" Text="NCrunch: $(NCrunch) | Github: $(GITHUB_ACTIONS)" />
+	</Target>
 	<ItemGroup>
-		<PackageReference Include="BeatSaberModdingTools.Tasks" Version="2.0.0-beta5">
+		<PackageReference Include="BeatSaberModdingTools.Tasks" Version="2.0.0-beta7">
 		  <PrivateAssets>all</PrivateAssets>
 		  <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 		</PackageReference>
